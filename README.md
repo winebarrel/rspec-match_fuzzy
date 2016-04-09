@@ -2,6 +2,8 @@
 
 String matcher to ignore whitespace.
 
+[![Build Status](https://travis-ci.org/winebarrel/rspec-match_fuzzy.svg?branch=master)](https://travis-ci.org/winebarrel/rspec-match_fuzzy)
+
 ## Installation
 
 Add this line to your application's Gemfile:
