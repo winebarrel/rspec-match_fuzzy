@@ -23,6 +23,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'rspec/match_fuzzy'
+
 it '...' do
   str1 = <<-EOS
     London Bridge
@@ -52,6 +54,7 @@ end
 ### Use ERB
 
 ```ruby
+require 'rspec/match_fuzzy'
 include RSpec::MatchFuzzy
 
 it '...' do
