@@ -28,18 +28,3 @@ expected: #{expected_normalized.inspect}
     message
   end
 end
-
-module RSpec::MatchFuzzy
-  def erb(str, vars = {})
-    obj = Object.new
-
-    vars.each do |name, value|
-      obj.instance_variable_set("@#{name}", value)
-    end
-
-    obj.instance_eval do
-      ERB.new(str).result(binding)
-    end
-  end
-  module_function :erb
-end

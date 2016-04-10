@@ -50,15 +50,3 @@ it '...' do
   expect(str1).to match_fuzzy str2
 end
 ```
-
-### Use ERB
-
-```ruby
-require 'rspec/match_fuzzy'
-include RSpec::MatchFuzzy
-
-it '...' do
-  result = erb("<%= @foo %>, <%= @bar %>", foo: 100, bar: 'zoo')
-  expect(result).to match_fuzzy '100, zoo'
-end
-```
