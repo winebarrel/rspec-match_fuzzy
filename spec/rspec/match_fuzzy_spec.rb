@@ -51,4 +51,10 @@ describe 'match_fuzzy' do
       EOS
     end
   end
+
+  context 'when ignore tail line brake' do
+    specify do
+      expect(expected.strip).to match_fuzzy expected
+    end
+  end
 end

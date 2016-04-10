@@ -5,13 +5,13 @@ RSpec::Matchers.define :match_fuzzy do |expected|
 
   match do |actual|
     actual = actual.to_s
-    actual.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n") == expected.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n")
+    actual.strip.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n") == expected.strip.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n")
   end
 
   failure_message do |actual|
     actual = actual.to_s
-    actual_normalized = actual.gsub(/^\s+/, '').gsub(/\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
-    expected_normalized = expected.gsub(/^\s+/, '').gsub(/^\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
+    actual_normalized = actual.strip.gsub(/^\s+/, '').gsub(/\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
+    expected_normalized = expected.strip.gsub(/^\s+/, '').gsub(/^\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
 
     message = <<-EOS.strip
 expected: #{expected_normalized.inspect}
