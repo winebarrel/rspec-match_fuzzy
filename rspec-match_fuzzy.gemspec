@@ -1,7 +1,7 @@
 # coding: utf-8
 Gem::Specification.new do |spec|
   spec.name          = 'rspec-match_fuzzy'
-  spec.version       = '0.1.2'
+  spec.version       = '0.1.3'
   spec.authors       = ['winebarrel']
   spec.email         = ['sgwr_dts@yahoo.co.jp']
 
