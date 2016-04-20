@@ -10,8 +10,8 @@ RSpec::Matchers.define :match_fuzzy do |expected|
 
   failure_message do |actual|
     actual = actual.to_s
-    actual_normalized = actual.strip.gsub(/^\s+/, '').gsub(/\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
-    expected_normalized = expected.strip.gsub(/^\s+/, '').gsub(/^\s+$/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n")
+    actual_normalized = actual.strip.gsub(/^\s+/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n").gsub(/\s+$/, '')
+    expected_normalized = expected.strip.gsub(/^\s+/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n").gsub(/\s+$/, '')
 
     message = <<-EOS.strip
 expected: #{expected_normalized.inspect}
