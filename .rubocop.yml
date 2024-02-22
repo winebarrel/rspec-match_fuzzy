@@ -1,0 +1,14 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - "gemfiles/**/*"
+    - "vendor/bundle/**/*"
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+Gemspec/DevelopmentDependencies:
+  Enabled: false
