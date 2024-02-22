@@ -1,8 +1,8 @@
 # rspec-match_fuzzy
 
-String matcher to ignore whitespace.
+[![CI](https://github.com/winebarrel/rspec-match_fuzzy/actions/workflows/ci.yml/badge.svg)](https://github.com/winebarrel/rspec-match_fuzzy/actions/workflows/ci.yml)
 
-[![Build Status](https://travis-ci.org/winebarrel/rspec-match_fuzzy.svg?branch=master)](https://travis-ci.org/winebarrel/rspec-match_fuzzy)
+String matcher to ignore whitespace.
 
 ## Installation
 
