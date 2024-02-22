@@ -21,10 +21,7 @@ RSpec::Matchers.define :match_fuzzy do |expected|
 
     diff = RSpec::Expectations.differ.diff(actual_normalized, expected_normalized)
 
-    unless diff.strip.empty?
-      diff_label = RSpec::Matchers::MultiMatcherDiff::DEFAULT_DIFF_LABEL
-      message << "\n\n" << diff_label << diff
-    end
+    message << "\n\n" << 'Diff:' << diff unless diff.strip.empty?
 
     message
   end
