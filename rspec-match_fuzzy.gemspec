@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'rspec-match_fuzzy'
-  spec.version       = '0.1.3'
+  spec.version       = '0.2.0'
   spec.authors       = ['winebarrel']
-  spec.email         = ['sgwr_dts@yahoo.co.jp']
+  spec.email         = ['sugawara@winebarrel.jp']
 
   spec.summary       = 'String matcher to ignore whitespace.'
   spec.description   = 'String matcher to ignore whitespace.'
