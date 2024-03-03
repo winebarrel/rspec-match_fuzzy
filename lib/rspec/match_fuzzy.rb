@@ -3,16 +3,19 @@
 require 'rspec'
 
 RSpec::Matchers.define :match_fuzzy do |expected|
+  scrub = lambda { |s|
+    s.strip.gsub(/^\s+/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n").gsub(/\s+$/, '')
+  }
+
   expected = expected.to_s
   match do |actual|
     actual = actual.to_s
-    actual.strip.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n") == expected.strip.gsub(/[[:blank:]]+/, '').gsub(/\n+/, "\n")
+    scrub[actual] == scrub[expected]
   end
 
   failure_message do |actual|
-    actual = actual.to_s
-    actual_normalized = actual.strip.gsub(/^\s+/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n").gsub(/\s+$/, '')
-    expected_normalized = expected.strip.gsub(/^\s+/, '').gsub(/[[:blank:]]+/, "\s").gsub(/\n+/, "\n").gsub(/\s+$/, '')
+    actual_normalized = scrub[actual.to_s]
+    expected_normalized = scrub[expected]
 
     message = <<~EOS.strip
       expected: #{expected_normalized.inspect}
