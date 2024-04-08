@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rspec', '>= 3.2'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rubocop', '1.60.2'
+  spec.add_development_dependency 'rubocop', '1.63.0'
   spec.add_development_dependency 'rubocop-rake', '>= 0.5.1'
   spec.add_development_dependency 'rubocop-rspec', '>= 2.1.0'
   spec.metadata['rubygems_mfa_required'] = 'true'
