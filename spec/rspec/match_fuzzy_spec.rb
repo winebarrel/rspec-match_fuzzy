@@ -60,6 +60,12 @@ describe 'match_fuzzy' do
     end
   end
 
+  context 'when either contains a carriage return' do
+    specify do
+      expect("London Bridge\r\nIs Broken down").to match_fuzzy "London Bridge\nIs Broken down"
+    end
+  end
+
   context 'when not match' do
     specify do
       expect do
